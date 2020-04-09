@@ -3,6 +3,13 @@
  * @param {string} str base
  * @returns {boolean}
  */
+
 function checkSpam(str) {
-  // ваш код...
+  str = str.toUpperCase();
+
+  if(str.includes('1XBET') || str.includes('XXX')) {
+    return true;
+  }
+
+  return false;
 }
