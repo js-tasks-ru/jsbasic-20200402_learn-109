@@ -5,7 +5,7 @@
  */
 
 function factorial(n) {
-  if(n < 0 || n == undefined) {
+  if(n < 0 || n === undefined) {
   	alert('You\'ve typed an incorrect value as the argument.');
   	return;
   };
