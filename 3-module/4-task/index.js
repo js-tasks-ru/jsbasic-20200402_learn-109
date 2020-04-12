@@ -5,5 +5,10 @@
  * @returns {string}
  */
 function showSalary(data, age) {
-  // ваш код...
+  return data
+    .filter(item => (item.age <= age))
+    .reduce((prev, item) => {
+      let statement = `${item.name}, ${item.balance}`;
+      return (prev) ? prev + '\n' + statement : statement;
+    }, '');
 }
