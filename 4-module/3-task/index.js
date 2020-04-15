@@ -16,6 +16,6 @@ function highlight(table) {
             row.classList.add(gender.textContent === 'm' ? 'male' : 'female');
 
         let age = row.cells[1];
-            row.style.textDecoration = (+age.textContent < 18) && 'line-through';
+            if(+age.textContent < 18) row.style.textDecoration = 'line-through';
     })
 }
