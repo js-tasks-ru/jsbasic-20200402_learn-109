@@ -6,9 +6,12 @@ function highlight(table) {
     Array.from(table.tBodies[0].rows).forEach(row => {
         
         let status = row.cells[3];
-            row.classList.add(status.dataset.available === "true" ? 'available' : 'unavailable');
-            row.hidden = !status.hasAttribute('data-available');
-
+            if(status.hasAttribute('data-available')) {
+                row.classList.add(status.dataset.available === "true" ? 'available' : 'unavailable');
+            } else {
+                row.hidden = true;
+            }
+            
         let gender = row.cells[2];
             row.classList.add(gender.textContent === 'm' ? 'male' : 'female');
 
